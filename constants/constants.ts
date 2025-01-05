@@ -44,64 +44,62 @@ export const SocialIcons = [
     { id: 3, path: 'www.instagram.com', icon:'/public/icons/whatsapp.svg'},
 
 ];
+
+
+
+
+ export const galleryItems: GalleryItem[] = [
+    { id: 1, imageUrl: "/gallery1.jpg?height=700&width=1200", alt: "Barber cutting hair" },
+    { id: 2, imageUrl: "/gallery2.jpg?height=700&width=1200", alt: "Stylish haircut" },
+    { id: 3, imageUrl: "/haircut12.jpg?height=700&width=1200", alt: "Beard trimming" },
+    { id: 4, imageUrl: "/haircut11.jpg?height=700&width=1200", alt: "Barber shop interior" },
+    { id: 5, imageUrl: "/haircut10.jpg?height=700&width=1200", alt: "Hair styling" },
+     { id: 6, imageUrl: "/haircut8.webp?height=700&width=1200", alt: "Beard trimming" },
+     { id: 7, imageUrl: "/haircut7.jpg?height=700&width=1200", alt: "Barber shop interior" },
+     { id: 8, imageUrl: "/haircut6.jpg?height=700&width=1200", alt: "Hair styling" },
+     { id: 9, imageUrl: "/haircut8.webp?height=700&width=1200", alt: "Beard trimming" },
+     { id: 10, imageUrl: "/haircut5.jpg?height=700&width=1200", alt: "Barber shop interior" },
+     { id: 11, imageUrl: "/haircut4.jpg?height=700&width=1200", alt: "Hair styling" },
+     { id: 12, imageUrl: "/nels-10.jpg?height=700&width=1200", alt: "Beard trimming" },
+     ]
+
+
 export const ServiceItems= [
 
 
-    {imgName:img1,
-        src: '@/public/nels-1.jpg',
+    {   imgUrl: '/haircut12.jpg',
         title:'HAIR CUT',
         desc:'A classic haircut and styling',
         price:'£35.99'
     },
-    {imgName: img2,
-        src: {img2},
-        title:'WASH + CUT',
+    {   imgUrl: '/gallery5.jpg',
+        title:'HAIR CUT',
         desc:'A classic haircut and styling',
-        price:'£39.99'
+        price:'£35.99'
     },
-    {imgName:img3,
-        src:{img3},
-        title:'SKIN FADE CUT',
+    {   imgUrl: '/haircut4.jpg',
+        title:'HAIR CUT',
         desc:'A classic haircut and styling',
-        price:'£28.99'
+        price:'£35.99'
     },
-    {imgName:img4,
-        src:{img4},
-        title:'SUPREME SKIN FADE CUT + WASH',
+    {   imgUrl: '/haircut10.jpg',
+        title:'HAIR CUT',
         desc:'A classic haircut and styling',
-        price:'£38.99'
+        price:'£35.99'
     },
-    {imgName:img5,
-        src:{img5},
-        title:'HAIR CUT + BEARD',
-        desc:'A classic haircut & Trimming and shaping of the beard',
-        price:'£28.99'
-    },
-    {imgName:img6,
-        src: {img6},
-        title:'SKIN FADE CUT + BEARD',
-        desc:'Trimming and shaping of the beard',
-        price:'£25.99'
-    },
-
-    {imgName:img7,
-        src: {img7},
-        title:'BEARD TRIM',
-        desc:'Trimming and shaping of the beard',
-        price:'£21.99'
-    },
-    {imgName:img8,
-        src: {img8},
-        title:'CREW CUT',
+    {   imgUrl: '/haircut7.jpg',
+        title:'HAIR CUT',
         desc:'A classic haircut and styling',
-        price:'£24.99'
+        price:'£35.99'
     },
-    {imgName:img9,
-        src: {img9},
-        title:'KING CREW CUT + WASH',
+    {   imgUrl: '/haircut6.jpg',
+        title:'HAIR CUT',
         desc:'A classic haircut and styling',
-        price:'£38.99'
+        price:'£35.99'
     },
-
-
+    {   imgUrl: '/haircut8.jpg',
+        title:'HAIR CUT',
+        desc:'A classic haircut and styling',
+        price:'£35.99'
+    },
 ]

@@ -1,10 +1,10 @@
 
 import React from 'react';
 import Image from "next/image";
-import {ServiceItems} from '../../constants/constants';
+import {ServiceItems} from '@/constants/constants';
 
-type serviceProps={
-    imgName:string;
+type Props={
+    imgUrl:string;
     title:string;
     desc:string;
     price:string;
@@ -25,13 +25,7 @@ const ServiceSection = () => {
                 {ServiceItems.map((service, idx) => (
                     <div key={idx}
                          className="border border-gray-200 p-4 rounded shadow hover:shadow-md h transition-shadow">
-                        <Image
-                            src={service.imgName}
-                            alt={service.title}
-                            width={0}
-                            height={0}
-                            className="object-cover w-65 h-56 rounded transform transition duration-500 hover:scale-110 hover:opacity-80"
-                        />
+
                         <h3 className="mt-4 text-lg font-semibold text-white tracking-wider">{service.title}</h3>
                         <p className="mt-2 text-sm text-white tracking-wider">{service.desc}</p>
                         <p className={'mt-4 text-[1rem] text-white font-bold'}>{service.price}</p>

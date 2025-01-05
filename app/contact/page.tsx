@@ -1,18 +1,7 @@
+import {ContactForm} from "@/components/ContactForm";
 
 
+const Con = () => {
 
-const ContactPage = ()=>{
-    return(
-
-        <section className='w-max-[1440px] h-screen flex
-         items-center justify-center mx-auto'>
-            <p>ContactPage </p>
-
-           
-
-        </section>
-
-
-    )
+ <ContactForm />
 }
-export default ContactPage

@@ -1,54 +1,51 @@
-
-
-
-
-import React from 'react';
-import Slider from 'react-slick';
-import Image from 'next/image';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import { galleryData } from '@/constants/galleryData';
+import React from 'react'
+import Image from 'next/image'
+import { Card, CardContent } from "@/components/ui/card"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+import { galleryItems } from '@/constants/constants'
 
 
 
 type GalleryItem = {
-    imageLink: string;
-    src: { [key: string]: string };
-};
+    id: number;
+    imageUrl: string;
+    alt: string;
+}
 
 
-
-const GallerySlider: React.FC = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    };
-
+export default function BarberGallery() {
     return (
-        <section className="w-full h-[70vh] bg-gray-100">
-            <Slider {...settings} className="h-full">
-                {galleryData.map((item: GalleryItem, index: number) => (
-                    <div key={index} className="h-[70vh] relative">
-                        <Image
-                            src={Object.values(item.src)[0]}
-                            alt={`Gallery image ${index + 1}`}
-                            layout="fill"
-                            objectFit="cover"
-                            quality={100}
-                            priority={index === 0}
-                        />
-                    </div>
-                ))}
-            </Slider>
+        <section className="w-full bg-gray-600 py-12 min-h-screen">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl font-bold text-center mb-8">Our Gallery</h2>
+                <Carousel className="w-full">
+                    <CarouselContent className="h-[70vh]">
+                        {galleryItems.map((item) => (
+                            <CarouselItem key={item.id}>
+                                <Card className="h-full border-none">
+                                    <CardContent className="flex items-center justify-center p-0 h-full">
+                                        <Image
+                                            src={item.imageUrl}
+                                            alt={item.alt}
+                                            width={1200}
+                                            height={700}
+                                            className="object-cover w-full h-full rounded-lg"
+                                        />
+                                    </CardContent>
+                                </Card>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                </Carousel>
+            </div>
         </section>
-    );
-};
-
-export default GallerySlider;
-
+    )
+}

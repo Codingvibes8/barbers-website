@@ -3,7 +3,7 @@
 import Hero from '@/components/Hero'
 import About from '@/app/about/page'
 import Contact from '@/app/contact/page'
-import Gallery from '@/app/gallery/page'
+import BarberGallery from '@/components/Gallery'
 import Services from '@/app/services/page'
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     <Hero/>
       <About/>
       <Services/>
-      <Gallery/>
+      <BarberGallery/>
       <Contact/>
     </div>
   );

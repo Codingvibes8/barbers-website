@@ -14,15 +14,18 @@ const Navbar = () => {
         { label: 'Services', path: '/services' },
         { label: 'About', path: '/about' },
         { label: 'Contact', path: '/contact' },
+
+        { label: 'Gallery', path: '/gallery' },
     ]
 
 
     return (
-        <nav className="sticky top-0 left-0 z-50 flex h-16 max-w-[1440px] items-center justify-between bg-blue-800 p-4 text-white uppercase lg:px-20 xl:px-40">
+        <nav className="sticky top-0 left-0 z-50 flex h-16 max-w-[1440px] items-center justify-between
+         p-4 text-black uppercase lg:px-20 xl:px-40">
             {/* LOGO */}
             <div className="flex flex-1 justify-start font-serif font-bold ">
-                <Link href="/" className="flex items-center p-2 text-black bg-yellow-500 rounded-md">
-                    <Image src="/scissors.svg" width={30} height={20} alt="logo" />
+                <Link href="/" className="flex items-center p-2 text-gray-950  rounded-md">
+                    <Image src="/scissors.svg" width={30} height={20} alt="logo"/>
                     <p className="text-[1.3rem] tracking-wide ">
                         Maxim Barbs
                     </p>
@@ -35,7 +38,7 @@ const Navbar = () => {
                     <Link
                         href={item.path}
                         key={item.label}
-                        className="text-[0.9rem] text-white hover:font-bold"
+                        className="text-[0.9rem] text-gray-700 font-bold hover:font-bold"
                     >
                         <div className="mb-2 flex items-center justify-center duration-500 ease-in-out hover:translate-y-2 hover:font-semibold hover:transition-all">
                             {item.label}
