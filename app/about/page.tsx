@@ -4,8 +4,8 @@ const AboutSection = () => {
     return (
        <>
            <section className={'max-w-[1536px]'}>
-            <h1 className={'text-center text-4xl bg-gray-700 text-green-100 w-full py-20 font-bold '}>About Us</h1>
-            <div className="flex flex-col md:flex-row bg-gray-700 gap-6">
+            <h1 className={'text-center text-4xl bg-gray-900 text-green-100 w-full py-20 font-bold '}>About Us</h1>
+            <div className="flex flex-col md:flex-row bg-gray-900 gap-6">
 
                 <div className="md:w-1/2">
                     <div className="rounded-t-2xl bg-white">

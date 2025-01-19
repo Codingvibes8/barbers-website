@@ -1,16 +1,16 @@
 import React from 'react';
 
-import BarberGallery from '@/components/Gallery'
+import Gallery from '@/components/Gallery'
 
 
-const Gallery: React.FC = () => {
+const GalleryPage: React.FC = () => {
   
 
     return (
         <section className="w-full bg-gray-100 py-12">
-        <BarberGallery/>
+        <Gallery/>
         </section>
     );
 };
 
-export default Gallery;
+export default GalleryPage;
