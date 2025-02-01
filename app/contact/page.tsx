@@ -1,7 +1,10 @@
 import {ContactForm} from "@/components/ContactForm";
 
 
-const Con = () => {
+const ContactPage = () => {
+return(
+    <ContactForm />
+)
 
- <ContactForm />
 }
+export default ContactPage;
