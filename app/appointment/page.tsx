@@ -1,11 +1,6 @@
-
-
-
-
-
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
 import { supabase } from '@/lib/supabaseClient';
 import { toast } from '@/components/ui/toast';
@@ -13,23 +8,44 @@ import { Calendar } from '@/components/Calender';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 
+// Define types for barbers and services
+interface Barber {
+    id: string;
+    name: string;
+    specialization: string;
+}
+
+interface Service {
+    id: string;
+    name: string;
+    price: number;
+}
+
 export default function AppointmentPage() {
     const { user } = useUser();
     const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
     const [selectedBarber, setSelectedBarber] = useState<string>('');
     const [selectedService, setSelectedService] = useState<string>('');
-    const [barbers, setBarbers] = useState<any[]>([]);
-    const [services, setServices] = useState<any[]>([]);
+    const [barbers, setBarbers] = useState<Barber[]>([]);
+    const [services, setServices] = useState<Service[]>([]);
+
+    // Define fetchData outside useEffect
+    const fetchData = async () => {
+        const { data: barbersData } = await supabase.from('barbers').select('*');
+        const { data: servicesData } = await supabase.from('services').select('*');
+        setBarbers(barbersData || []);
+        setServices(servicesData || []);
+    };
 
     // Fetch barbers and services on component mount
-    useState(() => {
-        const fetchData = async () => {
-            const { data: barbersData } = await supabase.from('barbers').select('*');
-            const { data: servicesData } = await supabase.from('services').select('*');
-            setBarbers(barbersData || []);
-            setServices(servicesData || []);
-        };
-        fetchData();
+    useEffect(() => {
+        (async () => {
+            try {
+                await fetchData();
+            } catch (error) {
+                console.error('Failed to fetch data:', error);
+            }
+        })();
     }, []);
 
     const handleSubmit = async () => {
@@ -66,9 +82,7 @@ export default function AppointmentPage() {
             <div className="space-y-6">
                 <div>
                     <h2 className="text-xl font-semibold mb-2">Select Date</h2>
-                    <Calendar selected={selectedDate}  onSelect={setSelectedDate} />
-
-
+                    <Calendar selected={selectedDate} onSelect={setSelectedDate} />
                 </div>
                 <div>
                     <h2 className="text-xl font-semibold mb-2">Select Barber</h2>

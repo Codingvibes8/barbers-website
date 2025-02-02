@@ -21,7 +21,7 @@ const Navbar = () => {
 
     return (
         <nav className="sticky top-0 left-0 z-50 flex h-16 max-w-[1440px] items-center justify-between
-         p-4 text-black uppercase lg:px-20 xl:px-40">
+         p-4 text-black bg-gray-400 uppercase lg:px-20 xl:px-40">
             {/* LOGO */}
             <div className="flex flex-1 justify-start font-serif font-bold ">
                 <Link href="/" className="flex items-center p-2 text-gray-950  rounded-md">

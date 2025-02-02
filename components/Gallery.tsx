@@ -21,10 +21,10 @@ export default function Gallery() {
     const currentIndex = selectedImage ? filteredItems.findIndex(item => item.id === selectedImage.id) : -1
 
     return (
-        <section className="w-full bg-gray-900 py-16">
+        <section className="w-full bg-gray-50 py-16">
             <div className="container px-4 mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-white mb-4">Our Gallery</h2>
+                    <h2 className="text-4xl font-bold text-gray-800§ mb-4">Our Gallery</h2>
                     <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
 
                     <div className="flex flex-wrap justify-center gap-4 mb-8">

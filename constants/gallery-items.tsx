@@ -3,13 +3,13 @@ import { GalleryItem } from '@/types/gallery'
 export const galleryItems: GalleryItem[] = [
     {
         id: 1,
-        imageUrl: "/gallery.jpg",
+        imageUrl: "/gallery1.jpg",
         alt: "Modern fade haircut",
         category: 'haircut'
     },
     {
         id: 2,
-        imageUrl: "/gallery2.jpg",
+        imageUrl: "/beard-trim.jpg",
         alt: "Beard grooming",
         category: 'beard'
     },
@@ -21,13 +21,13 @@ export const galleryItems: GalleryItem[] = [
     },
     {
         id: 4,
-        imageUrl: "/gallery11.jpg",
+        imageUrl: "/haircut5.jpg",
         alt: "Premium haircut",
         category: 'haircut'
     },
     {
         id: 5,
-        imageUrl: "/gallery12.jpg",
+        imageUrl: "/haircut6.jpg",
         alt: "Beard trimming",
         category: 'beard'
     },

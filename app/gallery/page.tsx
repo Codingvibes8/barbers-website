@@ -7,7 +7,7 @@ const GalleryPage: React.FC = () => {
   
 
     return (
-        <section className="w-full bg-gray-100 py-12">
+        <section className="w-full bg-gray-50 py-12">
         <Gallery/>
         </section>
     );

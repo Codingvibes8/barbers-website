@@ -4,8 +4,8 @@ const AboutSection = () => {
     return (
        <>
            <section className={'max-w-[1536px]'}>
-            <h1 className={'text-center text-4xl bg-gray-900 text-green-100 w-full py-20 font-bold '}>About Us</h1>
-            <div className="flex flex-col md:flex-row bg-gray-900 gap-6">
+            <h1 className={'text-center text-4xl  text-green-100 w-full py-20 font-bold '}>About Us</h1>
+            <div className="flex flex-col md:flex-row gap-6">
 
                 <div className="md:w-1/2">
                     <div className="rounded-t-2xl bg-white">
@@ -13,14 +13,14 @@ const AboutSection = () => {
                          className="w-full mx-auto mb-6"/>
                     </div>
                 </div>
-                <div className="md:w-1/2 flex items-center p-4 mb-6">
+                <div className="md:w-1/2 flex items-center p-4 mb-6 bg-gray-50">
                     <div className={'flex flex-col items-center w-full mx-auto'}>
                         <div>
-                        <span className={'text-4xl text-slate-200 font-bold italic'}>
+                        <span className={'text-4xl text-slate-800 font-bold italic'}>
                             Our Story
                         </span>
 
-                            <p className={'text-[1rem] text-slate-200 max-w-prose mb-6 flex items-center mt-8'}>
+                            <p className={'text-[1rem] text-slate-800 max-w-prose mb-6 flex items-center mt-8'}>
                                 At HipStyle, we’re more than just a place to get a fresh haircut.
                                 Our journey began 15 years ago] when Nelson Richards
                                 decided to create a space where gentlemen could experience
@@ -30,23 +30,23 @@ const AboutSection = () => {
                             </p>
                         </div>
                         <div>
-                        <span className={'text-4xl text-slate-200 font-bold italic'}>
+                        <span className={'text-4xl text-slate-800 font-bold italic'}>
                             Our Values
                         </span>
 
-                            <ol className={' mt-8 max-w-prose flex flex-col items-center'}>
-                             <li className={'text-[1rem] text-slate-200'}>Quality: We take pride in our craft.
+                            <ol className={' mt-8 max-w-prose flex flex-col items-center text-slate-800'}>
+                             <li className={'text-[1rem] '}>Quality: We take pride in our craft.
                                  Every scissor snip and razor stroke is
                                  executed with precision and care.
                                  Your satisfaction is our priority.
                              </li>
-                                <li className={'text-[1rem] text-slate-200'}>
+                                <li className={'text-[1rem]'}>
                                     Professionalism: Our team of skilled barbers is not only talented
                                     but also professional. Expect friendly conversations,attention to detail,
                                      and a warm smile when you walk through our doors
 
                                 </li>
-                                <li className={'text-[1rem] text-slate-200'}>
+                                <li className={'text-[1rem] '}>
                                     Customer Experience: We believe that a great haircut is
                                     more than just aesthetics— it’s an experience.From the moment you step in,
                                     we want you to feel comfortable, pampered, and confident.
