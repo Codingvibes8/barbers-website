@@ -3,7 +3,7 @@ import {Button} from './ui/button'
 
 export default function HeroSection() {
     return (
-        <div className="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
+        <div className="relative h-[calc(100vh-4rem)] max-w-[1536px] overflow-hidden">
             <Image
                 src="/haircut1.jpg"
                 alt="Barber shop interior"

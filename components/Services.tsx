@@ -1,5 +1,6 @@
 import { Scissors, BeakerIcon as Beard, SprayCanIcon, Brush } from 'lucide-react'
-
+import React from 'react'
+   
 interface Service {
     title: string
     description: string
@@ -36,11 +37,11 @@ const services: Service[] = [
 
 export default function ServicesSection() {
     return (
-        <section className="py-16 bg-gray-900">
+        <section className="py-16 relative min-h-screen max-w-[1536px] ">
             <div className="container px-4 mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-                    <div className="w-24 h-1 bg-primary mx-auto"></div>
+                    <h2 className="text-4xl font-bold dark:text-white mb-4">Our Services</h2>
+
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

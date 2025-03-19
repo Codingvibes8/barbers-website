@@ -7,6 +7,7 @@ import { toast } from '@/components/ui/toast';
 import { Calendar } from '@/components/Calender';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 // Define types for barbers and services
 interface Barber {
@@ -29,7 +30,7 @@ export default function AppointmentPage() {
     const [barbers, setBarbers] = useState<Barber[]>([]);
     const [services, setServices] = useState<Service[]>([]);
 
-    // Define fetchData outside useEffect
+   
     const fetchData = async () => {
         const { data: barbersData } = await supabase.from('barbers').select('*');
         const { data: servicesData } = await supabase.from('services').select('*');
@@ -77,7 +78,7 @@ export default function AppointmentPage() {
     };
 
     return (
-        <div className="p-6 max-w-4xl mx-auto">
+        <section className={'max-w-[1536px] min-h-screen py-16 px-8 md:px-12 lg:px-20 xl:px-40 '}>
             <h1 className="text-3xl font-bold mb-6">Book an Appointment</h1>
             <div className="space-y-6">
                 <div>
@@ -113,11 +114,12 @@ export default function AppointmentPage() {
                             ))}
                         </SelectContent>
                     </Select>
-                </div>
-                <Button onClick={handleSubmit} className="w-full">
+                 </div>
+                <Link href='/appointment' onClick={handleSubmit} className="w-full">
                     Book Appointment
-                </Button>
+                </Link>
             </div>
-        </div>
+        </section>
+    
     );
 }

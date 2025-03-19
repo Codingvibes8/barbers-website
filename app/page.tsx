@@ -5,6 +5,7 @@ import About from '@/app/about/page'
 import Contact from '@/app/contact/page'
 import BarberGallery from '@/components/Gallery'
 import Services from '@/app/services/page'
+import AppointmentPage from './appointment/page'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services/>
       <BarberGallery/>
       <Contact/>
+      <AppointmentPage/>
     </div>
   );
 }
